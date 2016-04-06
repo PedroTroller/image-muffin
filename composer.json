@@ -2,7 +2,7 @@
     "name": "pedrotroller/image-muffin",
     "require": {
         "fzaninotto/faker": "~1.1",
-        "imagine/imagine": "^0.6.3",
+        "imagine/imagine": "~0.1",
         "symfony/console": "~2.0|~3.0",
         "symfony/finder": "~2.0|~3.0"
     },
