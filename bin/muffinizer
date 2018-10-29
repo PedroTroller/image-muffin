@@ -26,5 +26,7 @@ if (false === $loaded) {
     throw new \Exception('Can\'t find autoload');
 }
 
-$application = new PedroTroller\ImageMuffin\Application;
+$application = new Symfony\Component\Console\Application;
+$application->add(new PedroTroller\ImageMuffin\Command\GenerateCommand);
+$application->setDefaultCommand('generate', true);
 $application->run();
