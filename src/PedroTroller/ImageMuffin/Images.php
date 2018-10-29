@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace PedroTroller\ImageMuffin;
 
 use Generator;
-use Imagine\Imagick\Imagine;
 use IteratorAggregate;
+use PedroTroller\ImageMuffin\Imagine\Factory;
 use Symfony\Component\Finder\Finder;
 
 final class Images implements IteratorAggregate
@@ -14,7 +14,7 @@ final class Images implements IteratorAggregate
     public function getIterator(): Generator
     {
         $root    = (string) realpath(sprintf('%s/../../../fixtures', __DIR__));
-        $imagine = new Imagine();
+        $imagine = (new Factory())->create();
 
         $finder = (new Finder())
             ->in($root)
