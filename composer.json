@@ -1,7 +1,6 @@
 {
     "name": "pedrotroller/image-muffin",
     "require": {
-        "ext-imagick": "*",
         "imagine/imagine": "~1.1.0",
         "symfony/console": "~3.0|~4.0",
         "symfony/finder": "~3.0|~4.0"
