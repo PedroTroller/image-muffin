@@ -18,7 +18,7 @@ final class Factory
         ];
 
         foreach ($modules as $module => $class) {
-            if (false === \extension_loaded($module)) {
+            if (\extension_loaded($module)) {
                 return new $class();
             }
         }
